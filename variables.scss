@@ -1,0 +1,48 @@
+
+
+$light-cyan: #8294a9;
+$dark-cyan: #5A6980;
+$main-blue: #00a8bf;
+$dark-blue: #4b4f5f;
+$white: #ffffff;
+$sky-blue: #34ccff;
+$title-color: #364967;
+$p-color: #68778e;
+$red: #f02830;
+$light-gray: #8996AB;
+$choice-back: #DBECF1;
+$choice: #4D6383;
+$blog-title: #4D6383;
+$footer-color: #284B6B;
+$copyright-color: #25415A;
+$light-black: #21333E;
+
+$bg-light: #F5F8F9;
+
+@mixin breakpoint($point) {
+  @if $point == xs {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $point == sm {
+    @media (min-width: 576px) and (max-width: 768px) {
+      @content;
+    }
+  } @else if $point == md {
+    @media (min-width: 768px) and (max-width: 992px) {
+      @content;
+    }
+  } @else if $point == lg {
+    @media (min-width: 992px) and (max-width: 1200px) {
+      @content;
+    }
+  } @else if $point == xl {
+    @media (min-width: 1200px) and (max-width: 1400px) {
+      @content;
+    }
+  } @else if $point == xxl {
+    @media (min-width: 1400) {
+      @content;
+    }
+  }
+}
